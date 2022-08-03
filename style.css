@@ -14,6 +14,7 @@ body {
 	color: var(--text-color);
 	font-family: "Roboto Mono", Inconsolata, monospace, sans-serif;
 	font-size: var(--text-size);
+	overflow-x: hidden;
 }
 
 nav {
@@ -70,7 +71,6 @@ nav .theme {
 .active::before {
 	content: ">.";
 	display: inline-block;
-	animation: blink 0.8s infinite;
 }
 
 .container {
@@ -79,6 +79,7 @@ nav .theme {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	align-self: center;
 	margin: 0;
 }
 
@@ -93,7 +94,6 @@ footer {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	padding: 10px;
 	position: fixed;
 	bottom: 0;
 	height: 3em;
