@@ -20,7 +20,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 99vw;
+	width: 98vw;
 	padding: 5px;
 	background: var(--background-color);
 	color: var(--text-color);
