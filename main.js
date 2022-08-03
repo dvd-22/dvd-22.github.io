@@ -1,16 +1,6 @@
 const theme = document.querySelector(".theme");
 const root = document.documentElement;
 const typer = document.querySelector(".typer");
-const navlinks = document.querySelectorAll(".nav-link");
-
-navlinks.forEach((link) => {
-	link.addEventListener("click", () => {
-		navlinks.forEach((link) => {
-			link.classList.remove("active");
-		});
-		link.classList.add("active");
-	});
-});
 
 theme.addEventListener("click", () => {
 	if (theme.classList.contains("dark")) {

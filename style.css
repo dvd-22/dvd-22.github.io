@@ -70,6 +70,7 @@ nav .theme {
 .active::before {
 	content: ">.";
 	display: inline-block;
+	animation: blink 0.8s infinite;
 }
 
 .container {
