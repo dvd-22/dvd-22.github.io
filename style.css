@@ -18,13 +18,19 @@ body {
 
 nav {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	width: 98vw;
-	padding: 5px;
+	align-items: center;
+	margin: auto;
+	width: 90%;
+	padding: 10px;
 	background: var(--background-color);
 	color: var(--text-color);
-	font-family: "Roboto Mono", Inconsolata, monospace, sans-serif;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 nav li {
@@ -34,18 +40,39 @@ nav li {
 	cursor: pointer;
 }
 
+nav .theme {
+	transform: translateY(0.2em);
+}
+
+.nav-link {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.nav-link:hover:not(.active)::before {
+	content: ">.";
+	display: inline-block;
+}
+
+.active {
+	color: var(--text-color);
+	text-decoration: overline;
+}
+
 h1 {
-	font-size: 2em;
+	font-size: calc(var(--text-size) * 2);
 	font-weight: bold;
 	margin: 0;
-	padding: 0;
+	padding: 2em;
 }
 
 footer {
 	color: var(--text-color);
 	position: absolute;
-	width: 99vw;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	padding: 10px;
 	bottom: 2em;
 }
 
