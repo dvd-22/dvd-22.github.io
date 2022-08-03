@@ -50,30 +50,52 @@ nav .theme {
 }
 
 .nav-link:hover:not(.active)::before {
+	content: ">";
+	display: inline-block;
+	animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.active::before {
 	content: ">.";
 	display: inline-block;
 }
 
-.active {
-	color: var(--text-color);
-	text-decoration: overline;
+.container {
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
 }
 
 h1 {
 	font-size: calc(var(--text-size) * 2);
 	font-weight: bold;
-	margin: 0;
 	padding: 2em;
 }
 
 footer {
-	color: var(--text-color);
-	position: absolute;
 	display: flex;
 	justify-content: center;
-	width: 90%;
+	align-items: center;
+	width: 100%;
 	padding: 10px;
-	bottom: 2em;
+	position: fixed;
+	bottom: 0;
+	height: 3em;
 }
 
 footer a {
