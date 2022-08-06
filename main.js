@@ -1,17 +1,32 @@
-const theme = document.querySelector(".theme");
+const themeButton = document.querySelector(".theme");
 const root = document.documentElement;
-const typer = document.querySelector(".typer");
 
-theme.addEventListener("click", () => {
-	if (theme.classList.contains("dark")) {
+themeButton.addEventListener("click", () => {
+	let theme = localStorage.getItem("theme");
+	if (theme === "light") {
+		root.style.setProperty("--background-color", "#1a1a1a");
+		root.style.setProperty("--text-color", "#fff");
+		themeButton.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
+		localStorage.setItem("theme", "dark");
+	} else {
 		root.style.setProperty("--background-color", "#fff");
 		root.style.setProperty("--text-color", "#000");
-		theme.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
-		theme.classList.remove("dark");
+		themeButton.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
+		localStorage.setItem("theme", "light");
+	}
+});
+
+function loadTheme() {
+	let theme = localStorage.getItem("theme");
+	if (theme === "light") {
+		root.style.setProperty("--background-color", "#fff");
+		root.style.setProperty("--text-color", "#000");
+		themeButton.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
 	} else {
 		root.style.setProperty("--background-color", "#1a1a1a");
 		root.style.setProperty("--text-color", "#fff");
-		theme.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
-		theme.classList.add("dark");
+		themeButton.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
 	}
-});
+}
+
+loadTheme();
