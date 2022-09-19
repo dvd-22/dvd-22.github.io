@@ -11,6 +11,7 @@ function loadTheme() {
 			`invert(0%) sepia(100%) saturate(0%) hue-rotate(322deg)
 		brightness(100%) contrast(100%)`
 		);
+		root.style.setProperty("--bg-shapes-opacity", "0.2");
 		themeButton.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
 	} else {
 		root.style.setProperty("--background-color", "#1a1a1a");
@@ -20,6 +21,7 @@ function loadTheme() {
 			`invert(100%) sepia(55%) saturate(0%) hue-rotate(143deg)
 			brightness(109%) contrast(101%)`
 		);
+		root.style.setProperty("--bg-shapes-opacity", "0.1");
 		themeButton.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
 	}
 }
