@@ -3,7 +3,7 @@
 :root {
 	--background-color: #1a1a1a;
 	--text-color: #fff;
-	--text-size: 1em;
+	--text-size: 15px;
 	--bg-shapes-color: invert(100%) sepia(55%) saturate(0%) hue-rotate(143deg)
 		brightness(109%) contrast(101%);
 	--bg-shapes-opacity: 0.3;
@@ -208,13 +208,18 @@ footer a {
 	text-decoration: none;
 	width: var(--text-size);
 	height: var(--text-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer a:hover {
 	cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* TBD: FIX RESPONSIVE FOR PIXEL 5 FLIPPED */
+
+@media (max-width: 912px) {
 	:root {
 		--text-size: 0.8em;
 	}
@@ -246,11 +251,17 @@ footer a:hover {
 			"p ";
 		width: 100%;
 		height: 100%;
-		overflow: visible;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	.project-list {
+		min-height: 50vh;
 	}
 
 	.project {
 		margin-top: 0px;
+		font-size: (var(--text-size) * 1.5);
 	}
 
 	footer {
