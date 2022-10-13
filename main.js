@@ -1,3 +1,37 @@
+//Navbar
+
+var navbar = ` 
+<header>
+	<nav class="navbar">
+		<a href="./index.html" class="nav-logo">&ltD&#47&gt</a>
+		<ul class="nav-menu">
+			<li class="nav-item">
+				<a href="./index.html" class="nav-link">aboutme</a>
+			</li>
+			<li class="nav-item">
+				<a href="./projects.html" class="nav-link">projects</a>
+			</li>
+			<li class="nav-item">
+				<a href="./contact.html" class="nav-link">contact</a>
+			</li>
+			<li class="nav-item">
+				<a href="./blog.html" class="nav-link">blog</a>
+			</li>
+		</ul>
+		<button type="button" title="theme" class="theme"><ion-icon name="sunny-outline"></ion-icon></button>
+
+		<button type="button" title="hamburger" class="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</button>
+	</nav>
+</header>
+`;
+document.body.insertAdjacentHTML("afterbegin", navbar);
+
+// Theme button
+
 const themeButton = document.querySelector(".theme");
 const root = document.documentElement;
 
@@ -36,3 +70,22 @@ themeButton.addEventListener("click", () => {
 });
 
 loadTheme();
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+	hamburger.classList.toggle("active");
+	navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+	hamburger.classList.remove("active");
+	navMenu.classList.remove("active");
+}
