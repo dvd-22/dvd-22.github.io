@@ -29,7 +29,7 @@ body {
 	width: 100vw;
 	left: -5em;
 	opacity: var(--bg-shapes-opacity);
-	height: 100vh;
+	height: 90vh;
 }
 
 nav {
@@ -46,6 +46,7 @@ nav {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	z-index: 3;
 }
 
 .nav-logo {
@@ -86,6 +87,10 @@ nav {
 	content: ">";
 	display: inline-block;
 	animation: blink 0.8s infinite;
+}
+
+.cursor {
+	z-index: 1;
 }
 
 .hamburger {
@@ -258,9 +263,9 @@ footer a:hover {
 
 	.wrapper-bg {
 		width: 100vw;
-		left: -10em;
+		left: calc(10% - 50vw);
 		height: 80vh;
-		top: 10em;
+		top: calc(60% - 50vh);
 	}
 
 	.wrapper-bg img {
@@ -298,6 +303,9 @@ footer a:hover {
 		position: relative;
 		bottom: 0;
 	}
+	.cursor {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -322,6 +330,7 @@ footer a:hover {
 
 	.nav-menu.active {
 		left: 0;
+		z-index: 3;
 	}
 
 	.nav-item {

@@ -4,14 +4,42 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Blog - David A</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="../style.css" />
 		<link
 			rel="shortcut icon"
-			href="./images/favicon.ico"
+			href="../images/favicon.ico"
 			type="image/x-icon"
 		/>
 	</head>
 	<body>
+		<header>
+			<nav class="navbar">
+				<a href="../" class="nav-logo">&#60;D&#47;&gt;</a>
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="../" class="nav-link">aboutme</a>
+					</li>
+					<li class="nav-item">
+						<a href="../projects" class="nav-link">projects</a>
+					</li>
+					<li class="nav-item">
+						<a href="../contact" class="nav-link">contact</a>
+					</li>
+					<li class="nav-item">
+						<a href="./" class="nav-link">blog</a>
+					</li>
+				</ul>
+				<button type="button" title="theme" class="theme">
+					<ion-icon name="sunny-outline"></ion-icon>
+				</button>
+
+				<button type="button" title="hamburger" class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</nav>
+		</header>
 		<div class="container">
 			<div class="canvas">
 				<div class="titles">
@@ -66,6 +94,6 @@
 			nomodule
 			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
 		></script>
-		<script src="./main.js"></script>
+		<script src="./blog.js"></script>
 	</body>
 </html>
