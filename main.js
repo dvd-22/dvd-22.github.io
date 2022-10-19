@@ -6,16 +6,16 @@ var navbar = `
 		<a href="./index.html" class="nav-logo">&ltD&#47&gt</a>
 		<ul class="nav-menu">
 			<li class="nav-item">
-				<a href="./index.html" class="nav-link">aboutme</a>
+				<a href="./" class="nav-link">aboutme</a>
 			</li>
 			<li class="nav-item">
-				<a href="./projects.html" class="nav-link">projects</a>
+				<a href="./projects" class="nav-link">projects</a>
 			</li>
 			<li class="nav-item">
-				<a href="./contact.html" class="nav-link">contact</a>
+				<a href="./contact" class="nav-link">contact</a>
 			</li>
 			<li class="nav-item">
-				<a href="./blog.html" class="nav-link">blog</a>
+				<a href="./blog" class="nav-link">blog</a>
 			</li>
 		</ul>
 		<button type="button" title="theme" class="theme"><ion-icon name="sunny-outline"></ion-icon></button>
