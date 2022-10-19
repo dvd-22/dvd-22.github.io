@@ -1,4 +1,21 @@
-// Theme button
+let footer = `
+<footer>
+<a
+	href="http://github.com/dvd-22/david"
+	target="_blank"
+	rel="noopener noreferrer"
+	id="coded"
+	>&lt;&#47;&gt;</a
+>
+&VeryThinSpace; with &#10084;&#65039; by &VeryThinSpace;
+<a
+	href="http://github.com/dvd-22"
+	target="_blank"
+	rel="noopener noreferrer"
+	>&#128192;</a
+>
+</footer>`;
+document.body.insertAdjacentHTML("beforeend", footer);
 
 const themeButton = document.querySelector(".theme");
 const root = document.documentElement;
@@ -14,7 +31,7 @@ function loadTheme() {
 		brightness(100%) contrast(100%)`
 		);
 		root.style.setProperty("--bg-shapes-opacity", "0.2");
-		themeButton.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
+		themeButton.innerHTML = '<i data-feather="moon"></i>';
 	} else {
 		root.style.setProperty("--background-color", "#1a1a1a");
 		root.style.setProperty("--text-color", "#fff");
@@ -24,7 +41,7 @@ function loadTheme() {
 			brightness(109%) contrast(101%)`
 		);
 		root.style.setProperty("--bg-shapes-opacity", "0.1");
-		themeButton.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
+		themeButton.innerHTML = '<i data-feather="sun"></i>';
 	}
 }
 
@@ -35,9 +52,11 @@ themeButton.addEventListener("click", () => {
 		: localStorage.setItem("theme", "light");
 
 	loadTheme();
+	feather.replace();
 });
 
 loadTheme();
+feather.replace();
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
