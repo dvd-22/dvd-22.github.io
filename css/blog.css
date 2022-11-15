@@ -1,1 +1,77 @@
 @import "style.css";
+
+.blog-canvas {
+	display: grid;
+	grid-template-areas:
+		"pt pt pt"
+		"p  p  p"
+		"p  p  p"
+		"p  p  p";
+	height: 100%;
+}
+
+.post-titles {
+	display: grid;
+	grid-template-areas:
+		"t t t"
+		"s s s"
+		"d d d" !important;
+	width: 100%;
+	grid-area: pt;
+	height: fit-content;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.post-title {
+	font-size: calc(var(--text-size) * 2);
+	font-weight: bold;
+	text-align: center;
+	grid-area: t;
+}
+
+.post-subtitle {
+	font-size: calc(var(--text-size) * 1.5);
+	text-align: center;
+	grid-area: s;
+}
+
+.post {
+	top: 20px;
+	grid-area: p;
+	text-align: justify;
+	font-size: var(--text-size);
+	padding: 3rem;
+}
+
+.post p {
+	line-height: 1.5rem;
+}
+
+.date {
+	font-size: calc(var(--text-size) * 0.8);
+	text-align: center;
+	grid-area: d;
+	color: var(--blog-date-color);
+}
+
+.nota {
+	color: var(--blog-date-color);
+}
+
+/* Responsive del blog */
+
+@media only screen and (max-width: 768px) {
+	.post {
+		padding: 1rem;
+		font-size: medium;
+	}
+
+	.date {
+		font-size: small;
+	}
+
+	.post-title {
+		font-size: calc(var(--text-size) * 3);
+	}
+}
