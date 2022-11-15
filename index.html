@@ -1,69 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About Me - David A</title>
-		<link rel="stylesheet" href="style.css" />
-		<link
-			rel="shortcut icon"
-			href="./images/favicon.ico"
-			type="image/x-icon"
-		/>
-		<script src="https://unpkg.com/feather-icons"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="wrapper-bg">
-				<img src="./images/bg_shapes.svg" alt="shapes" id="bg" />
-			</div>
+<head>
+	<meta charset="UTF-8" />
 
-			<div class="canvas">
-				<div class="titles">
-					<h1 class="title">
-						"Hello, I'm
-						<span
-							class="typer"
-							id="first-typer"
-							data-words=' David!"'
-							data-delay="100"
-							data-deleteDelay="3000"
-							data-colors="invert"
-							data-loop="false"
-						></span>
-						<script
-							async
-							src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"
-						></script>
-					</h1>
-					<h2 class="subtitle">
-						[
-						<span
-							class="typer"
-							id="second-typer"
-							data-words='"17 y/o web developer", "graphic designer", "hobbyist musician", "math lover"'
-							data-delay="50"
-							data-deleteDelay="3000"
-							data-colors="invert"
-						></span>
-						<span
-							class="cursor"
-							data-owner="second-typer"
-							data-cursor-display="|"
-						></span>
-						<script
-							async
-							src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"
-						></script>
-						]
-					</h2>
-				</div>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About Me · David A</title>
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
 
-				<article></article>
-			</div>
+<body>
+	<div class="container">
+		<div class="wrapper-bg">
+			<img src="/images/bg_shapes.svg" alt="shapes" id="bg" />
 		</div>
 
-		<script src="./main.js"></script>
-	</body>
+		<div class="canvas">
+			<div class="titles">
+				<h1 class="title">
+					"Hello, I'm
+					<span class="typer" id="first-typer" data-words=' David!"' data-delay="100" data-deleteDelay="3000"
+						data-colors="invert" data-loop="false"></span>
+					<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+				</h1>
+				<h2 class="subtitle">
+					[
+					<span class="typer" id="second-typer"
+						data-words='"17 y/o web developer", "graphic designer", "hobbyist musician", "math lover"'
+						data-delay="50" data-deleteDelay="3000" data-colors="invert"></span>
+					<span class="cursor" data-owner="second-typer" data-cursor-display="|"></span>
+					<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+					]
+				</h2>
+			</div>
+
+			<article></article>
+		</div>
+	</div>
+
+	<script src="/js/navbar.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+
 </html>

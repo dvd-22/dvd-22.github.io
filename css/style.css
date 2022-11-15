@@ -209,10 +209,17 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
 	position: fixed;
 	bottom: 0;
+	left: 0;
 	height: calc(var(--text-size) * 3);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.55) 43%,
+		rgba(0, 0, 0, 0) 97%
+	);
+	transition: 200ms all;
 }
 
 footer:hover {
@@ -233,6 +240,48 @@ footer a:hover {
 	cursor: pointer;
 }
 
+/****************** BLOG ****************/
+
+.blog-canvas {
+	display: grid;
+	grid-template-areas:
+		"pt pt pt"
+		"p  p  p"
+		"p  p  p"
+		"p  p  p";
+	height: 100%;
+}
+
+.post-titles {
+	width: 100%;
+	grid-area: pt;
+	height: fit-content;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.post-title {
+	font-size: calc(var(--text-size) * 2);
+	font-weight: bold;
+	text-align: center;
+}
+
+.post-subtitle {
+	font-size: calc(var(--text-size) * 1.5);
+	text-align: center;
+}
+
+.post {
+	top: 20px;
+	grid-area: p;
+	text-align: justify;
+	font-size: var(--text-size);
+	padding: 3rem;
+}
+
+.post p {
+	line-height: 1.5rem;
+}
 /* TBD: FIX RESPONSIVE FOR PIXEL 5 FLIPPED */
 
 @media (max-width: 916px) {
@@ -300,7 +349,7 @@ footer a:hover {
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		position: relative;
+		position: fixed;
 		bottom: 0;
 	}
 	.cursor {

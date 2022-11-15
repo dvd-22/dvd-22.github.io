@@ -1,75 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blog - David A</title>
-		<link rel="stylesheet" href="../style.css" />
-		<link
-			rel="shortcut icon"
-			href="../images/favicon.ico"
-			type="image/x-icon"
-		/>
-		<script src="https://unpkg.com/feather-icons"></script>
-	</head>
-	<body>
-		<header>
-			<nav class="navbar">
-				<a href="../" class="nav-logo">&lt;D&#47;&gt;</a>
-				<ul class="nav-menu">
-					<li class="nav-item">
-						<a href="../" class="nav-link">aboutme</a>
-					</li>
-					<li class="nav-item">
-						<a href="../projects" class="nav-link">projects</a>
-					</li>
-					<li class="nav-item">
-						<a href="../contact" class="nav-link">contact</a>
-					</li>
-					<li class="nav-item">
-						<a href="./" class="nav-link">blog</a>
-					</li>
-				</ul>
-				<button type="button" title="theme" class="theme">
-					<i data-feather="sun"></i>
-				</button>
 
-				<button type="button" title="hamburger" class="hamburger">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</button>
-			</nav>
-		</header>
-		<div class="container">
-			<div class="canvas">
-				<div class="titles">
-					<h1 class="title">
-						<span
-							class="typer"
-							id="first-typer"
-							data-words='"Blog"'
-							data-delay="100"
-							data-deleteDelay="3000"
-							data-colors="invert"
-							data-loop="false"
-						></span>
-						<span
-							class="cursor"
-							data-owner="first-typer"
-							data-cursor-display="|"
-						></span>
-						<script
-							async
-							src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"
-						></script>
-					</h1>
-					<h2 class="subtitle">Thoughts from this programmer.</h2>
-				</div>
-				<article></article>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Blog · David A</title>
+	<link rel="stylesheet" href="/css/blog.css">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="canvas project-canvas">
+			<div class="titles">
+				<h1 class="title">
+					<span class="typer" id="first-typer" data-words='"Blog"' data-delay="100" data-deleteDelay="3000"
+						data-colors="invert" data-loop="false"></span>
+					<span class="cursor" data-owner="first-typer" data-cursor-display="|"></span>
+					<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+				</h1>
+				<h2 class="subtitle">Thoughts from this programmer.</h2>
 			</div>
+			<ul class="project-list blogposts">
+				<li class="project">
+					<a rel="noopener" href="./hombre-solitario.html"><i data-feather="github"></i> GitHub</a>
+				</li>
+			</ul>
 		</div>
+	</div>
 
-		<script src="./blog.js"></script>
-	</body>
+	<script src="/js/navbar.js"></script>
+	<script src="/js/main.js"></script>
+	<script type="module" src="/js/blog.js"></script>
+</body>
+
 </html>
