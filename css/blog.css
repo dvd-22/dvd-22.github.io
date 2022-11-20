@@ -1,5 +1,11 @@
 @import "style.css";
 
+hr {
+	margin: 0;
+	border: 0;
+	border-top: 1px solid var(--blog-date-color);
+}
+
 .blog-canvas {
 	display: grid;
 	grid-template-areas:

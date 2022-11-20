@@ -1,7 +1,7 @@
 //Navbar
 
 let navbar = ` 
-<header>
+<header class="nav-wrapper">
 	<nav class="navbar">
 	<a href="/index.html" class="nav-logo">&lt;D&#47;&gt;</a>
 		<ul class="nav-menu">
@@ -50,28 +50,28 @@ let footer = `
 
 document.body.insertAdjacentHTML("beforeend", footer);
 
-const insertedFooter = document.querySelector("footer");
+//const insertedFooter = document.querySelector("footer");
 
-window.onscroll = function () {
-	var pageHeight = Math.max(
-		document.body.scrollHeight,
-		document.body.offsetHeight,
-		document.documentElement.clientHeight,
-		document.documentElement.scrollHeight,
-		document.documentElement.offsetHeight
-	);
-	if (window.innerHeight + window.scrollY >= pageHeight - 100) {
-		insertedFooter.style.setProperty(
-			"background",
-			`linear-gradient(
-			0deg,
-			rgba(0, 0, 0, 0.55) 43%,
-			rgba(0, 0, 0, 0) 97%
-		)`
-		);
-		insertedFooter.style.setProperty("display", "flex");
-	} else {
-		insertedFooter.style.setProperty("background", "rgba(0, 0, 0, 0)");
-		insertedFooter.style.setProperty("display", "none");
-	}
-};
+// window.onscroll = function () {
+// 	var pageHeight = Math.max(
+// 		document.body.scrollHeight,
+// 		document.body.offsetHeight,
+// 		document.documentElement.clientHeight,
+// 		document.documentElement.scrollHeight,
+// 		document.documentElement.offsetHeight
+// 	);
+// 	if (window.innerHeight + window.scrollY >= pageHeight - 100) {
+// 		insertedFooter.style.setProperty(
+// 			"background",
+// 			`linear-gradient(
+// 			0deg,
+// 			rgba(0, 0, 0, 0.55) 43%,
+// 			rgba(0, 0, 0, 0) 97%
+// 		)`
+// 		);
+// 		insertedFooter.style.setProperty("display", "flex");
+// 	} else {
+// 		insertedFooter.style.setProperty("background", "rgba(0, 0, 0, 0)");
+// 		insertedFooter.style.setProperty("display", "none");
+// 	}
+// };
