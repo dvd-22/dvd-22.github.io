@@ -5,7 +5,7 @@ let blogposts = [
 	},
 ];
 
-let div = document.getElementById("blogposts");
-for (let post of blogposts) {
-	console.log(post.title);
-}
+// let div = document.getElementById("blogposts");
+// for (let post of blogposts) {
+// 	console.log(post.title);
+// }
