@@ -1,9 +1,25 @@
 @import "style.css";
 
-hr {
-	margin: 0;
-	border: 0;
-	border-top: 1px solid var(--blog-date-color);
+.blogpost {
+	display: grid;
+	grid-template-areas:
+		"pt"
+		"t";
+	height: 100%;
+	width: 100%;
+}
+
+.clicky-links {
+	width: 100%;
+	grid-area: pt;
+}
+
+.post-type {
+	color: var(--blog-date-color);
+	grid-area: t;
+	font-size: small;
+	width: 100%;
+	padding: 1rem;
 }
 
 .blog-canvas {
@@ -63,6 +79,64 @@ hr {
 
 .nota {
 	color: var(--blog-date-color);
+	padding: 1rem;
+	margin-top: 4rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid var(--text-color);
+	border-top: 1px solid var(--text-color);
+	font-size: small;
+	font-style: italic;
+}
+
+details {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding: 1rem;
+	border: 1px solid var(--text-color);
+	background-color: var(--link-bg-color);
+	transition: 100ms all ease-in-out;
+}
+
+details > summary {
+	font-weight: bold;
+	cursor: pointer;
+	padding: 1.5rem;
+}
+
+details[open] > summary {
+	border-bottom: solid 1px var(--text-color);
+}
+
+details li {
+	padding: 1rem;
+	list-style: square;
+}
+
+.link {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	width: -moz-fit-content;
+	width: fit-content;
+	color: var(--link-color) !important;
+}
+
+.link:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--text-color);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.link:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /* Responsive del blog */

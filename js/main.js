@@ -6,6 +6,7 @@ function loadTheme() {
 	if (theme === "light") {
 		root.style.setProperty("--background-color", "#fff");
 		root.style.setProperty("--text-color", "#000");
+		root.style.setProperty("--link-color", "#000dc6");
 		root.style.setProperty(
 			"--bg-shapes-color",
 			`invert(0%) sepia(100%) saturate(0%) hue-rotate(322deg)
@@ -16,6 +17,7 @@ function loadTheme() {
 	} else {
 		root.style.setProperty("--background-color", "#1a1a1a");
 		root.style.setProperty("--text-color", "#fff");
+		root.style.setProperty("--link-color", "#00ffff");
 		root.style.setProperty(
 			"--bg-shapes-color",
 			`invert(100%) sepia(55%) saturate(0%) hue-rotate(143deg)
