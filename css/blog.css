@@ -144,7 +144,11 @@ details li {
 
 /* Responsive del blog */
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 916px) {
+	.blog-canvas {
+		margin-top: calc(var(--nav-height) * 1.2);
+	}
+
 	.post {
 		padding: 1rem;
 		font-size: medium;
