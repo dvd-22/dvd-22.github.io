@@ -15,15 +15,26 @@
 	--nav-height: 60px;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
 html,
 body {
-	position: relative;
 	height: 100vh;
 	min-height: 100vh;
-	min-width: 100%;
-	width: 100%;
+	min-width: 100vw;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -51,13 +62,14 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
+	z-index: 3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 nav {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -74,7 +86,6 @@ nav {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	z-index: 3;
 }
 
 .nav-logo {
@@ -154,17 +165,14 @@ nav {
 	0% {
 		opacity: 0;
 	}
-	50% {
-		opacity: 1;
-	}
 	100% {
-		opacity: 0;
+		opacity: 1;
 	}
 }
 
 .container {
 	margin: 0;
-	margin-top: calc(var(--nav-height) * 1.1);
+	margin-top: var(--nav-height);
 	left: 0;
 	min-height: 100%;
 	min-width: 90%;
@@ -183,8 +191,8 @@ nav {
 .titles {
 	display: grid;
 	grid-template-areas:
-		"t t t"
-		"s s s";
+		"t"
+		"s";
 	margin: 1em;
 }
 
@@ -208,9 +216,8 @@ nav {
 .project-canvas {
 	display: grid;
 	grid-template-areas:
-		"tp p p"
-		"im p p"
-		"im p p";
+		"tp p p "
+		". p p ";
 	min-height: 100%;
 	height: 80vh;
 }
@@ -221,7 +228,7 @@ nav {
 	grid-gap: var(--text-size);
 	margin: var(--text-size);
 	grid-area: p;
-	overflow: hidden;
+	overflow-x: hidden;
 	padding: calc(var(--text-size) * 2);
 }
 
@@ -231,7 +238,7 @@ nav {
 	flex-direction: column;
 	justify-content: space-between;
 	max-height: 100%;
-	list-style: none;
+	/* list-style: none; */
 	border: var(--text-color) 1px solid;
 	background-color: var(--link-bg-color);
 	transition: all 0.1s ease-in-out;
@@ -244,7 +251,6 @@ a:visited {
 	padding: var(--text-size);
 	color: var(--text-color);
 	text-decoration: none;
-	background-color: none;
 }
 
 .clicky:hover,

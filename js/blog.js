@@ -1,11 +1,44 @@
-let blogposts = [
+const parent = document.getElementsByClassName("blogposts");
+
+let list = [
+	{
+		title: "Tools List",
+		type: "Resource",
+		path: "./tools.html",
+	},
+	{
+		title: "Horizonte de Eventos",
+		type: "Tale",
+		path: "./horizonte-de-eventos.html",
+	},
 	{
 		title: "Hombre solitario",
-		date: "14/11/2022",
+		type: "Tale",
+		path: "./hombre-solitario.html",
 	},
 ];
 
-// let div = document.getElementById("blogposts");
-// for (let post of blogposts) {
-// 	console.log(post.title);
-// }
+const createBlogLinks = () => {
+	for (let i = 0; i < list.length; i++) {
+		let li = document.createElement("li");
+		li.className = "blogpost clicky";
+		li.id = list[i].title.toLowerCase().replace(/ /g, "-");
+
+		let a = document.createElement("a");
+		a.rel = "noopener";
+		a.href = list[i].path;
+		a.className = "clicky-links";
+		a.innerText = list[i].title;
+
+		let div = document.createElement("div");
+		div.className = "post-type";
+		div.innerText = list[i].type;
+		li.appendChild(a);
+		li.appendChild(div);
+		parent[0].appendChild(li);
+	}
+};
+
+if (parent.length > 0) {
+	createBlogLinks();
+}

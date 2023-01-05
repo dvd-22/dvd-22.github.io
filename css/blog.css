@@ -1,43 +1,46 @@
 @import "style.css";
 
 .blogpost {
-	display: grid;
-	grid-template-areas:
-		"pt"
-		"t";
-	height: 100%;
-	width: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
 }
 
-.clicky-links {
-	width: 100%;
-	grid-area: pt;
+.blogpost > * {
+	height: 100%;
+	min-width: 90%;
+	padding: 1rem;
 }
 
 .post-type {
 	color: var(--blog-date-color);
-	grid-area: t;
 	font-size: small;
-	width: 100%;
 	padding: 1rem;
+	transform: translateY(-5rem);
+}
+
+.clicky-links {
+	z-index: 2;
+	min-height: 80%;
 }
 
 .blog-canvas {
 	display: grid;
 	grid-template-areas:
-		"pt pt pt"
-		"p  p  p"
-		"p  p  p"
-		"p  p  p";
+		"pt"
+		"p "
+		"p"
+		"p";
 	height: 100%;
 }
 
 .post-titles {
 	display: grid;
 	grid-template-areas:
-		"t t t"
-		"s s s"
-		"d d d" !important;
+		"t"
+		"s"
+		"d" !important;
 	width: 100%;
 	grid-area: pt;
 	height: fit-content;
