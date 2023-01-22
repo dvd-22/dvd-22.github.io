@@ -11,10 +11,15 @@ let list = [
 		type: "Tale",
 		path: "./horizonte-de-eventos.html",
 	},
+	// {
+	// 	title: "Hombre solitario",
+	// 	type: "Tale",
+	// 	path: "./hombre-solitario.html",
+	// },
 	{
-		title: "Hombre solitario",
+		title: "Carta a la pared",
 		type: "Tale",
-		path: "./hombre-solitario.html",
+		path: "./carta-a-la-pared.html",
 	},
 ];
 

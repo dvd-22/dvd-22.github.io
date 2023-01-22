@@ -27,6 +27,15 @@
 	border-radius: 5px;
 }
 
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 html,
 body {
 	height: 100vh;
@@ -81,12 +90,6 @@ nav {
 	color: var(--text-color);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 .nav-logo {
@@ -239,7 +242,7 @@ nav {
 	flex-direction: column;
 	justify-content: space-between;
 	max-height: 100%;
-	/* list-style: none; */
+	list-style: none;
 	border: var(--text-color) 1px solid;
 	background-color: var(--link-bg-color);
 	transition: all 0.1s ease-in-out;
@@ -261,6 +264,10 @@ a:visited {
 	transform: translateY(-0.2em);
 	box-shadow: var(--text-color) calc(var(--text-size) * 0.2)
 		calc(var(--text-size) * 0.2);
+}
+
+.clicky:target {
+	margin-top: 12rem;
 }
 
 .project-icon {

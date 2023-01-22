@@ -2,7 +2,7 @@
 
 let navbar = ` 
 <header class="nav-wrapper">
-	<nav class="navbar">
+	<nav class="navbar unselectable">
 	<a href="/index.html" class="nav-logo">&lt;D&#47;&gt;</a>
 		<ul class="nav-menu">
 			<li class="nav-item">
