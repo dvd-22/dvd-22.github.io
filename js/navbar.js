@@ -15,7 +15,7 @@ let navbar = `
 				<a href="/blog" class="nav-link">blog</a>
 			</li>
 			<li class="nav-item">
-				<a href="/projects.html" class="nav-link">projects</a>
+				<a href="https://projects.dvd22.me" class="nav-link">projects</a>
 			</li>
 		</ul>
 		<button type="button" title="theme" class="theme"><i data-feather="sun"></i></button>
