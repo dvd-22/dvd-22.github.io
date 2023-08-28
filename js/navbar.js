@@ -9,13 +9,13 @@ let navbar = `
 				<a href="/index.html" class="nav-link">aboutme</a>
 			</li>
 			<li class="nav-item">
-				<a href="/projects.html" class="nav-link">projects</a>
-			</li>
-			<li class="nav-item">
 				<a href="/contact.html" class="nav-link">contact</a>
 			</li>
 			<li class="nav-item">
 				<a href="/blog" class="nav-link">blog</a>
+			</li>
+			<li class="nav-item">
+				<a href="/projects.html" class="nav-link">projects</a>
 			</li>
 		</ul>
 		<button type="button" title="theme" class="theme"><i data-feather="sun"></i></button>
