@@ -115,33 +115,6 @@ details li {
 	list-style: square;
 }
 
-.link {
-	display: inline-block;
-	position: relative;
-	padding: 0;
-	width: -moz-fit-content;
-	width: fit-content;
-	color: var(--link-color) !important;
-}
-
-.link:after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: var(--text-color);
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
-}
-
-.link:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
-}
-
 /* Responsive del blog */
 
 @media (max-width: 916px) {
